@@ -25,12 +25,18 @@ This script downloads and configures the SDK locally. This involves:
 ### env_vars.sh
 Source this file, it will set the environment variables necessary to run make
 
-## Building a Project
-Go to `$REPO_DIR/sming/samples/Basic_Blink`
-Run:
+## Installation & Usage
 ```bash
+$PROJECT_DIR=/your/choice/of/dir
+
+# Setup
+git clone git@github.com:ajrkerr/sming-osx.git $PROJECT_DIR
+$PROJECT_DIR/setup_system_dependencies.sh
+$PROJECT_DIR/setup.sh
+
+# Building
+source $PROJECT_DIR/env_vars.sh
+cd $PROJECT_DIR/sming/samples/Basic_Blink
 make
 make flash
 ```
-
-This ought to build and then flash a connected wemos.
